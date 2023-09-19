@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main (){
+	float num1,num2,num3;
+	cout<<"dammi 3 numeri ";
+	cin>>num1;
+	cin>>num2;
+	cin>>num3;
+	if(num1==num2 && num1==num3){
+		cout<<"i numeri sono tutti uguali";
+	}
+	else{
+		if(num1==num2 || num1==num3 || num2==num3){
+			cout<<"2 numeri sono uguali";}
+		else
+			cout<<"i numeri sono tutti diversi";
+	}
+
+}

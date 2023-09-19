@@ -1,0 +1,35 @@
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+using namespace std;
+int NUM[100];
+int Npari=0,SommaN=0,Ppari=0,N=10;
+int main() {
+  srand(time(NULL));
+  for(int i=0; i<N; i++){
+    NUM[i]=rand()% 40 - 20; //memorizzo i valori casuali nel vettore
+    cout<<NUM[i]<<" "; //visualizzo i valori per sapere cosa è stato estratto
+  }
+  for(int i=0; i<N; i++){
+    if(NUM[i]%2==0){ //verifico se numero pari
+      Npari++;  //aggiorno il conteggio dei pari
+
+      if(i%2==0) // verifico se posizione pari
+        cout<<" il numero "<<NUM[i]<<" e' in posizione "<<i<<endl;
+    }
+    
+    if(NUM[i]<0){ // verifico se numero è negativo
+      SommaN+=NUM[i]; // //somme parziali di numeri negativi
+     
+    }
+
+
+      }
+    SommaN=abs(SommaN);
+ 
+    cout<<" i numeri pari sono "<<Npari;
+    cout<<"  la somma dei numeri negativi e' "<<SommaN;
+  
+}

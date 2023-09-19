@@ -1,0 +1,44 @@
+#include <iostream>  //libreria per Input e Output
+#include <iomanip>
+using namespace std;
+
+int num1, num2, num3; //dichiarazione di variabili
+int contpa=0, contdi=0; //dichiarazione ed inizializzazione di variabili
+float media; //dichiarazione variabile di tipo float
+
+int main () {
+	cout << "Dimmi 3 numeri.\n"; 
+	cin >> num1; //input num1
+	cin >> num2; //input num2
+	cin >> num3; //input num3
+	if (num1 < 0) {  
+		num1 = num1*-1; //se negativo  inverte il segno
+	}
+	if (num2 < 0) {
+		num2 = num2*-1;
+	}
+	if (num3 < 0) {
+		num3 = num3*-1;
+	}
+	media = (num1+num2+num3)/3;
+	cout << "La media ""<< media << endl;
+	if (num1%2 == 0) {
+		contpa++;  //conta numeri pari
+	}
+	else {
+		contdi++;  //conta numeri dispari
+	}
+	if (num2%2 == 0) {
+		contpa++;
+	}
+	else {
+		contdi++;
+	}
+	if (num3%2 == 0) {
+		contpa++;
+	}
+	else {
+		contdi++;
+	}
+	cout <<"mentre i numeri pari sono " << contpa << " e quelli dispari sono " << contdi << "\n";
+}
